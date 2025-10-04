@@ -1,0 +1,9 @@
+.widget-container {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically if needed */
+    width: 100% !important;
+    /* Takes up the available width */
+}

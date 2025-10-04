@@ -1,0 +1,226 @@
+/* Basic styles for the logo */
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo img:hover {
+  transform: scale(1.2);
+  /* You can adjust the values as needed */
+}
+
+/* Media query for smaller viewports (up to 900px) */
+
+@media (max-width: 2560px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    transition: transform 0.3s ease-in-out;
+    max-width: 80%;
+    height: auto;
+    position: relative;
+    top: -40px;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+
+  .logo img {
+    max-height: 150px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+
+  #section-home {
+    height: 120vh;
+    /* Μεγαλώνει το ύψος της εικόνας */
+    background-size: cover;
+    /* Βεβαιώνει ότι η εικόνα καλύπτει τον χώρο */
+    background-position: center center;
+    /* Κεντράρει την εικόνα */
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 60%;
+    height: auto;
+    top: -50px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 160px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+
+  #section-home {
+    height: 120vh;
+    /* Μεγαλώνει το ύψος της εικόνας */
+    background-size: cover;
+    /* Βεβαιώνει ότι η εικόνα καλύπτει τον χώρο */
+    background-position: center center;
+    /* Κεντράρει την εικόνα */
+  }
+}
+
+@media (max-width: 1023px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 50%;
+    height: auto;
+    top: -52px;
+    left: -20%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 160px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+}
+
+/* Media query for smaller viewports (up to 768px) */
+
+@media (max-width: 900px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 50%;
+    height: auto;
+    top: -43px;
+    left: -1%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 130px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 50%;
+    height: auto;
+    top: -43px;
+    left: -1%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 130px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+
+  #section-home {
+    height: 120vh;
+    /* Μεγαλώνει το ύψος της εικόνας */
+    background-size: cover;
+    /* Βεβαιώνει ότι η εικόνα καλύπτει τον χώρο */
+    background-position: center center;
+    /* Κεντράρει την εικόνα */
+  }
+}
+
+/* Media query for even smaller viewports (up to 480px) */
+
+@media (max-width: 480px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 60%;
+    height: auto;
+    top: -35px;
+    left: -1%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 120px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+}
+
+@media (max-width: 380px) {
+  .logo {
+    text-align: left;
+  }
+
+  .logo img {
+    max-width: 50%;
+    height: auto;
+    top: -27px;
+    left: -3%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Set a specific maximum height to maintain the desired size */
+  .logo img {
+    max-height: 100px;
+  }
+
+  .logo img:hover {
+    transform: scale(1.2);
+    /* You can adjust the values as needed */
+  }
+
+  #section-home {
+    height: 120vh;
+    /* Μεγαλώνει το ύψος της εικόνας */
+    background-size: cover;
+    /* Βεβαιώνει ότι η εικόνα καλύπτει τον χώρο */
+    background-position: center center;
+    /* Κεντράρει την εικόνα */
+  }
+}

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Σειρήνες | Λεωνίδιο</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-B/VvJf14sUOTk9KJqCFJ+1bMeUp0r5JHqK8O6Qc1DKGv3z5S8DGEn6vLwOzSghcR54ppfKSDYE3Iv+K7zZ1Aww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+        <link rel="stylesheet" href="css/social.css">
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cardflip.css">
+        <link rel="stylesheet" href="css/video.css">
+        <link rel="stylesheet" href="css/logo.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/sameheight.css">
+        <link rel="stylesheet" href="css/faqs.css">
+        <link rel="stylesheet" href="css/social.css">
+        <script src="https://kit.fontawesome.com/9765072bb3.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?hl=el" async defer></script>
+        <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('A-P9Unha_3XAbbTGj');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(function () {
+                            console.log('SUCCESS!');
+                        }, function (error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+
+    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+        <!-- ΜΠΑΡΑ ΠΛΟΗΓΗΣΗΣ-->
+        <div class="container">
+            <div class="row">
+                <div class="site-mobile-menu site-navbar-target">
+                    <div class="site-mobile-menu-header">
+                        <div class="site-mobile-menu-close mt-3">
+                            <span class="icon-close2 js-menu-toggle"></span>
+                        </div>
+                    </div>
+                    <div class="site-mobile-menu-body"></div>
+                </div>
+            </div>
+        </div>
+        <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-11 col-xl-2 logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-10 d-none d-xl-block">
+                        <nav class="site-navigation position-relative
+                                text-right" role="navigation">
+                            <ul class="site-menu js-clone-nav mx-auto d-none
+                                    d-lg-block">
+                                <li>
+                                    <a href="#section-home" class="nav-link">ΑΡΧΙΚΗ</a>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#section-about" class="nav-link">
+                                        ΠΟΙΟΙ
+                                        ΕΙΜΑΣΤΕ
+                                    </a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#section-reviews" class="nav-link">ΚΡΙΤΙΚΕΣ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#section-industries" class="nav-link">
+                                        ΔΙΑΜΕΡΙΣΜΑΤΑ
+                                        "ΣΕΙΡΗΝΕΣ"
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#section-services" class="nav-link">ΠΑΡΟΧΕΣ</a>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#section-activities" class="nav-link">
+                                        ΠΕΡΙΣΣΟΤΕΡΑ ΓΙΑ
+                                        ΕΜΑΣ
+                                    </a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#section-activities" class="nav-link">
+                                                ΑΞΙΟΘΕΑΤΑ
+                                                &amp; ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-our-team" class="nav-link">Η ΟΜΑΔΑ ΜΑΣ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#videoStyle" class="nav-link">ΕΝΔΕΙΚΤΙΚΕΣ ΤΙΜΕΣ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-faqs" class="nav-link">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#section-contact" class="nav-link">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                        <a href="#" class="site-menu-toggle js-menu-toggle">
+                            <span class="icon-menu h3"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+        <!--ΤΕΛΟΣ ΜΠΑΡΑΣ ΠΛΟΗΓΗΣΗΣ-->
+        <!-- ΑΡΧΙΚΗ BACKGROUND PHOTO-->
+        <div class="site-blocks-cover" style="background-image:
+        url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+            <div class="content">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center
+                            text-center">
+                        <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+                            <h1 class="text-white font-weight-light text-uppercase
+                                    font-weight-bold" data-aos="fade-up">
+                                Kαλως ορισατε
+                                στο
+                                Λεωνιδιο
+                            </h1>
+                            <p class="mb-5 text-white" data-aos="fade-up" data-aos-delay="100">
+                                ΔΙΑΜΕΡΙΣΜΑΤΑ
+                                ΣΕΙΡΗΝΕΣ
+                            </p>
+                            <p data-aos="fade-up" data-aos-delay="200">
+                                <a href="#section-about" class="btn btn-primary py-3
+                                        px-5 text-white">ΞΕΚΙΝΑ ΤΟ ΤΑΞΙΔΙ</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section bg-light" id="section-about">
+            <div class="content" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="heading font-weight-light text-primary">
+                    Διαμερισματα ΣΕΙΡΗΝΕΣ - Το ιδανικο
+                    καταλυμα για απολυτη χαλαρωση και διακοπες στο Λεωνιδιο
+                </h2>
+            </div>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-6 order-md-1" data-aos="fade-up" data-aos-delay="100">
+                        <p style="font-weight: bold;">
+                            Στην παραλία του Λεωνιδίου, κοντά στο λιμανάκι της Πλάκας,
+                            επιλέξαμε να δημιουργήσουμε για τη διαμονή σας τα διαμερίσματα «ΣΕΙΡΗΝΕΣ - SIRINES».
+                        </p>
+
+                        <p style="font-weight: bold;">
+                            Τα επιπλωμένα διαμερίσματα «ΣΕΙΡΗΝΕΣ - SIRINES», με την
+                            απεριόριστη θέα στο Μυρτώο πέλαγος, αποτελούν την ιδανική επιλογή για επισκέπτες κάθε
+                            ηλικίας.
+                        </p>
+                        <p style="font-weight: bold;">
+                            Σε απόσταση μόλις 50 μ. από το συγκρότημά μας απλώνεται η παραλία
+                            της Πλάκας, που σας καλεί να βουτήξετε στα νερά του Μυρτώου πελάγους. Γνωρίστε τον
+                            παραδοσιακό οικισμό του Λεωνιδίου μέσα από τα μικρά σοκάκια, τις όμορφες πλατείες,
+                            τα αρχοντικά αλλά και το γραφικό λιμανάκι της Πλάκας.
+                        </p>
+                        <p style="font-weight: bold;">
+                            Εμείς σας προσκαλούμε να ξεκουραστείτε, να αλλάξετε διάθεση,
+                            μακριά από το θόρυβο της πόλης,να αναζωογονηθείτε βλέποντας τον ήλιο να αναδύεται μέσα από
+                            τη θάλασσα και να χαλαρώσετε ακούγοντας τα απαλά κύματα.
+                        </p>
+                    </div>
+                    <div class="col-md-6 ml-auto mb-5 order-md-2 d-flex align-items-center " data-aos="fade-up"
+                        data-aos-delay="200">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.1561530681374!2d22.89047567479515!3d37.14898634796273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149fcec54d00ea57%3A0x32d8a02ba2190210!2sSirines%20Apartments!5e0!3m2!1sen!2sgr!4v1687511198497!5m2!1sen!2sgr"
+                            width="100%" height="100%" style="border:0;border-radius:
+                    5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="row justify-content-center  equal-height-row d-flex align-items-center ">
+                    <div class="col-md-6 equal-height-col">
+                        <div class="image-zoom position-relative" style="border-radius: 5px;" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <img src="images/sameheight.jpg" alt="image">
+                            <div class="text-inside-image" style="border-radius:
+                        5px;">Καλώς ορίσατε στην παραλία της Πλάκας</div>
+                            <a href="#section-activities" class="btn btn-secondary btn-inside-image"
+                                style="display: flex; border-radius: 5px; align-items: center; font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                                <span class="fas fa-landmark custom-icon2" style="margin-right: 8px;" data-aos="fade-up"
+                                    data-aos-delay="600"></span>ΕΞΕΡΕΥΝΗΣΗ
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-5 text-center">
+                        <div>
+                            <ul class="ul-check list-unstyled success">
+                                <li style="font-weight: bold;" data-aos="fade-up" data-aos-delay="500">Πλήρως
+                                    εξοπλισμένα
+                                    διαμερίσματα</li>
+                                <li style="font-weight: bold;" data-aos="fade-up" data-aos-delay="700"> Χώρος στάθμευσης
+                                </li>
+                                <li style="font-weight: bold;" data-aos="fade-up" data-aos-delay="900">Δωρεάν Wi-fi</li>
+                                <li style="font-weight: bold;" data-aos="fade-up" data-aos-delay="1100">Κλιματισμός
+                                    (A/C)
+                                </li>
+                                <li style="font-weight: bold;" data-aos="fade-up" data-aos-delay="1300">Βεράντα</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--New Social container-->
+                <nav class="social">
+                    <ul>
+                        <li><a href="https://www.instagram.com/sirines_apartments/">Instagram <i
+                                    class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://maps.app.goo.gl/mAGLEXwT8QQR2KY29">Google <i class="fa fa-google"
+                                    id="google"></i></a></li>
+                    </ul>
+                </nav>
+                <div class="me">
+                </div>
+
+
+
+                <div class="row site-section" data-aos="fade-up" data-aos-delay="100" id="section-reviews">
+                    <div class="col-md-12 text-center ">
+                        <h2 class="mb-0 text-primary">ΚΡΙΤΙΚΕΣ</h2>
+                        <p class="color-black-opacity-5">Ρίξτε μια ματιά στις ζωντανές κριτικές μας στο Google!</p>
+                        <div class="commonninja_component pid-c36ece66-395e-4654-8398-07608995923d"></div>
+                        <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section block-13 bg-white" data-aos="fade-up" data-aos-delay="100" id="section-industries">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="mb-0 text-primary">ΔΙΑΜΕΡΙΣΜΑΤΑ</h2>
+                        <p class="color-black-opacity-6">
+                            Σχεδιασμένο με απόλυτο σεβασμό στο φυσικό περοβάλλον, οι
+                            «ΣΕΙΡΗΝΕΣ – SIRINES» αποτελούν ένα συγκρότημα 6 διαμερισμάτων, χτισμένο σε ένα ιδιόκτητο
+                            οικόπεδο δίπλα στη θάλασσα.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-primary "
+                        style="color: #f16821; border:solid 1px; border-color: #E5E5E5;">
+                        <a class="nav-link text-white" href="#" onclick="showCarousel1(event)">
+                            <b>
+                                ΕΞΩΤΕΡΙΚΟΣ
+                                ΧΩΡΟΣ
+                            </b>
+                        </a>
+                    </button>
+                    <button type="button" class="btn btn-primary"
+                        style="color: #f16821; border:solid 1px; border-color: #E5E5E5">
+                        <a class="nav-link text-white" href="#" onclick="showCarousel2(event)">
+                            <b>
+                                ΕΣΩΤΕΡΙΚΟΣ
+                                ΧΩΡΟΣ
+                            </b>
+                        </a>
+                    </button>
+                    </nav>
+                </div>
+            </div>
+            <div id="carousel1" class="owl-carousel nonloop-block-13">
+                <div>
+                    <a href="images/img_11.jpg" class="unit-1 text-center">
+                        <img src="images/img_11.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_12.jpg" class="unit-1 text-center">
+                        <img src="images/img_12.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="images/img_14.jpg" class="unit-1 text-center">
+                        <img src="images/img_14.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_15.jpg" class="unit-1 text-center">
+                        <img src="images/img_15.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_16.jpg" class="unit-1 text-center">
+                        <img src="images/img_16.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_13.jpg" class="unit-1 text-center">
+                        <img src="images/img_13.jpg" alt="Image" class="img-fluid"
+                            style="filter: saturate(180%) contrast(100%);">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+            </div>
+            <div id="carousel2" class="owl-carousel nonloop-block-13" style="display: none;">
+                <div>
+                    <a href="images/img_1.jpg" class="unit-1 text-center">
+                        <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_2.jpg" class="unit-1 text-center">
+                        <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_3.jpg" class="unit-1 text-center">
+                        <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_4.jpg" class="unit-1 text-center">
+                        <img src="images/img_4.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_5.jpg" class="unit-1 text-center">
+                        <img src="images/img_5.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/img_8.jpg" class="unit-1 text-center">
+                        <img src="images/img_8.jpg" alt="Image" class="img-fluid">
+                        <div class="unit-1-text"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function showCarousel1(event) {
+                event.preventDefault();
+                document.getElementById('carousel1').style.display = 'block';
+                document.getElementById('carousel2').style.display = 'none';
+            }
+
+            function showCarousel2(event) {
+                event.preventDefault();
+                document.getElementById('carousel1').style.display = 'none';
+                document.getElementById('carousel2').style.display = 'block';
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.owl-carousel.nonloop-block-13').each(function () {
+                    var carousel = $(this);
+
+                    carousel.find('.unit-1').magnificPopup({
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        },
+                        mainClass: 'mfp-with-zoom',
+                        zoom: {
+                            enabled: true,
+                            duration: 300,
+                            easing: 'ease-in-out',
+                            opener: function (openerElement) {
+                                return openerElement.find('img');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+        <div class="site-section bg-light" id="section-services">
+            <div class="container text-center">
+                <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="mb-0 text-primary">Παροχες</h2>
+                        <p class="color-black-opacity-5">Υψηλής ποιότητας ανέσεις και παροχές.</p>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fas fa-wifi
+                            text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Δωρεάν πρόσβαση Wi-Fi</b>
+                                </h3>
+                                <p>
+                                    Δωρεάν, αξιόπιστη πρόσβαση Wi-Fi στους επισκέπτες μας.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="custom-icon">
+                                    <img alt="hanger logo" src="images\clothes-hanger.png"
+                                        style="width: 50px; height: 40px; margin-left: -5px;">
+                                </span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Είδη πρώτης ανάγκης</b>
+                                </h3>
+                                <p>
+                                    Δωρεάν εξοπλισμός αποθήκευσης προσωπικών αντικειμένων.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa fa-tv text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Smart Tηλεόραση</b>
+                                </h3>
+                                <p>
+                                    Παροχή τηλεόρασης με δυνατότητα σύνδεσης στο διαδίκτυο (Netflix).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa-solid fa-solar-panel
+                            text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Ηλιακός Θερμοσίφωνας</b>
+                                </h3>
+                                <p>
+                                    Παροχή ηλιακού θερμοσίφωνα.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-stretch">
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa
+                            fa-snowflake text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Κλιματισμός (A/C)</b>
+                                </h3>
+                                <p>
+                                    Προσφέρουμε στους επισκέπτες των διαμερισμάτων απόλυτη άνεση, δροσιά και απρόσκοπτη
+                                    ατμόσφαιρα χάρη στο προηγμένο σύστημα κλιματισμού.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="700">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa fa-kitchen-set
+                                    text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Πλήρως εξοπλισμένη κουζίνα</b>
+                                </h3>
+                                <p>
+                                    Κάθε διαμέρισμα είναι εξοπλισμένο με ψυγείο, κουζινάκι-φουρνάκι και σκεύη.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="800">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa fa-parking
+                            text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Ελεύθερος Χώρος Σταύθμευσης</b>
+                                </h3>
+                                <p>Εξασφαλίζουμε την ασφαλή στάθμευση του οχήματός σας στον ευρύχωρο και εύκολα
+                                    προσβάσιμο χώρο μας.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="900">
+                        <div class="unit-4 d-flex">
+                            <div class="unit-4-icon mr-4">
+                                <span class="fa fa-water
+                            text-primary custom-icon"></span>
+                            </div>
+                            <div>
+                                <h3>
+                                    <b>Πρόσβαση σε παραλία</b>
+                                </h3>
+                                <p>
+                                    Η παραλία βρίσκεται μόλις 50 μέτρα από τον χώρο των δωματίων.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ΑΤΡΑΚΤΙΟΝ ΚΑΙ ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ/ CARDS-->
+        <div class="site-section bg-white" id="section-activities">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="mb-0 text-primary">ΑΞΙΟΘΕΑΤΑ ΚΑΙ ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ</h2>
+                        <p class="color-black-opacity-5">
+                            Aνακαλύψτε και εξερευνήστε το Λεωνίδιο. Πατήστε πάνω στις
+                            κάρτες για
+                            ψυχαγωγικές προτάσεις!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <a class="card" data-aos="fade-up" data-aos-delay="200" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">1</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/leonidio.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(8px); border-radius: 20px;
+                        padding: 5px;" data-aos="fade">ΛΕΩΝΙΔΙΟ</h2>
+                    </div>
+                    <div class="back" style="background-image:
+                    url('images/leonidio.jpg');color: #fff;">
+                        <div>
+                            <p>
+                                Περιηγηθείτε μέσα στα στενά δρομάκια και τις γραφικές πλατείες του Λεωνιδίου. Γνωρίστε
+                                την παραδοσιακή αρχιτεκτονική του τόπου μέσα από τα αρχοντικά και τα πυργόσπιτα.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" data-aos="fade-up" data-aos-delay="300" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">2</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/parnon.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(7px); border-radius: 100px;
+                        padding:5px;" data-aos="fade">
+                            ΠΑΡΝΩΝΑΣ
+                        </h2>
+                    </div>
+                    <div class="back" style="background-image:
+                    url('images/parnon.jpg')">
+                        <div>
+                            <p>
+                                Εξερευνήστε το βουνά της οροσειράς Πάρνωνα που προσφέρουν πλούσια τοπία, μοναδική θέα
+                                και
+                                ευκαιρίες για δραστηριότητες όπως πεζοπορία, ποδηλασία βουνού και αναρρίχηση.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" data-aos="fade-up" data-aos-delay="400" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">3</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/elona.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(7px); border-radius: 100px;
+                        padding: 0;" data-aos="fade">
+                            ΜΟΝΗ ΠΑΝΑΓΙΑΣ ΕΛΩΝΑΣ
+                        </h2>
+                    </div>
+                    <div class="back" style="background-image:
+                    url('images/elona.jpg'); color: #fff;">
+                        <div>
+                            <p>
+                                Επισκεφθείτε τη ιστορική μονή της Παναγίας Ελώνας, τον επιβλητικό ναό της Αρκαδίας που
+                                χρονολογείται από το 1809 μ.Χ. και είναι χτισμένος σε μία απότομη πλαγιά του Πάρνωνα.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" data-aos="fade-up" data-aos-delay="500" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">4</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/poulithra.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(7px); border-radius: 100px;
+                        padding: 0;" data-aos="fade">
+                            ΛΙΜΑΝΑΚΙ ΤΗΣ ΠΛΑΚΑΣ
+                        </h2>
+                    </div>
+                    <div class="back" style="background-image:
+                    url('images/poulithra.jpg');color: #fff;">
+                        <div>
+                            <p>
+                                Χαλαρώστε κάνοντας βόλτα στο όμορφο γραφικό λιμανάκι της Πλάκας και τις ταβέρνες του.
+                        </div>
+                    </div>
+                </a>
+                <a class="card" data-aos="fade-up" data-aos-delay="600" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">5</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/sports.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(7px); border-radius: 100px;
+                        padding: 5px;" data-aos="fade">
+                            ΘΑΛΑΣΣΙΑ ΣΠΟΡ
+                        </h2>
+                    </div>
+                    <div class="back" style="background-image:
+                    url('images/sports.jpg')">
+                        <div>
+                            <p>
+                                Επιβιβαστείτε σε κανό ή καγιάκ για να εξερευνήσετε τα παραθαλάσσια σπήλαια και τις ακτές
+                                του Αργολικού κόλπου ή απολαύστε μία μοναδική καταδυτική εξερεύνηση του βυθού.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a class="card" data-aos="fade-up" data-aos-delay="700" href="#!">
+                    <div class="how-it-work-item">
+                        <span class="number">6</span>
+                    </div>
+                    <div class="front" style="background-image:
+                    url('images/climbing.jpg')">
+                        <h2 class="font-weight-light text-white" style="background-color: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(7px); border-radius: 100px;
+                        padding: 0;" data-aos="fade">
+                            ΑΝΑΡΡΙΧΗΣΗ ΣΤΟ ΛΕΩΝΙΔΙΟ
+                        </h2>
+                    </div>
+                    <div class="back" class="front" style="background-image:
+                    url('images/climbing.jpg');color: #fff;">
+                        <div>
+                            <p>
+                                Ο Κόκκινος Βράχος που υψώνεται πάνω από το Λεωνίδιο προσφέρει διαδρομές κατάλληλες για
+                                αναρρίχηση όλων των επιπέδων για μία αξέχαστη εμπειρία.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="site-section border-bottom bg-light " id="section-our-team" data-aos="fade" data-aos-delay="100">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="font-weight-light text-primary" data-aos="fade">Η ΟΜΑΔΑ ΜΑΣ</h2>
+                        <p class="color-black-opacity-5">Ώρες Επικοινωνίας: 09:00 π.μ. - 09:00 μ.μ.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+                        <div class="person">
+                            <img src="images/m_avatar.png" alt="Image"
+                                class="img-fluid rounded mb-5 w-50 rounded-circle" data-aos="fade" data-aos-delay="250">
+                            <h3>Γεώργιος Τσουκάτος</h3>
+                            <p class="position text-muted">ΥΠΕΥΘΥΝΟΣ</p>
+                            <ul class="ul-social-circle">
+                                <li>
+                                    <a id="phoneLink">
+                                        <span class="icon-phone" style="cursor: pointer;"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:gtsouka@yahoo.com">
+                                        <span class="icon-envelope"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="phoneModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>Τηλέφωνο:
+                                        <a href="tel:6944422678">6944422678</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+                        <div class="person">
+                            <img src="images/m_avatar.png" alt="Image"
+                                class="img-fluid rounded mb-5 w-50 rounded-circle" style="filter: hue-rotate(20deg);"
+                                data-aos="fade" data-aos-delay="400">
+                            <h3>Αλέξανδρος Τσουκάτος</h3>
+                            <p class="position text-muted">ΥΠΕΥΘΥΝΟΣ</p>
+                            <ul class="ul-social-circle">
+                                <li>
+                                    <a id="phoneLink2">
+                                        <span class="icon-phone" style="cursor: pointer;"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:altsouka@yahoo.com">
+                                        <span class="icon-envelope"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="phoneModal2" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>Τηλέφωνο:
+                                        <a href="tel:6936162428">6936162428</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <a href="index_en.html" class="language-changer">
+                <img src="images/england.png" alt="Εικόνα" class="image-link" width="25" height="25">
+                English
+            </a>
+
+            <button class="scroll-to-top" title="Scroll to Top">
+                <span class="icon-arrow-up"></span>
+            </button>
+        </div>
+
+        <div class="site-section" id="videoStyle">
+            <div class="background"></div>
+            <div class="video-overlay">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 col-sm-2 text-center border-primary">
+                        <h2 class="font-weight-light">Ενδεικτικες Τιμες</h2>
+                        <p class="color-black-opacity-3">Επικοινωνήστε μαζί μας για περαιτέρω πληροφορίες.</p>
+                    </div>
+                    <div class="ag-format-container">
+                        <div class="ag-courses_box">
+                            <div class="ag-courses_item" data-aos="fade-up" data-aos-delay="100">
+                                <a class="ag-courses-item_link">
+                                    <div class="ag-courses-item_bg"></div>
+                                    <div class="ag-courses-item_title">
+                                        Low Season
+                                        <br>
+                                        <span class="date-range">(01/09 - 31/05)</span>
+                                    </div>
+                                    <div class="ag-courses-item_date-box">
+                                        ΜΟΝΟΧΩΡΑ:
+                                        <span class="ag-courses-item_date">
+                                            40€ / ΗΜΕΡΑ
+                                        </span>
+                                    </div>
+                                    <div class="ag-courses-item_date-box">
+                                        ΔΙΧΩΡΑ:
+                                        <span class="ag-courses-item_date">
+                                            60€ / ΗΜΕΡΑ
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="ag-courses_item" data-aos="fade-up" data-aos-delay="200">
+                                <a class="ag-courses-item_link">
+                                    <div class="ag-courses-item_bg"></div>
+                                    <div class="ag-courses-item_title">
+                                        High Season
+                                        <br>
+                                        <span class="date-range">(01/06 - 31/08)</span>
+                                    </div>
+                                    <div class="ag-courses-item_date-box">
+                                        ΜΟΝΟΧΩΡΑ:
+                                        <span class="ag-courses-item_date">
+                                            70€ / ΗΜΕΡΑ
+                                        </span>
+                                    </div>
+                                    <div class="ag-courses-item_date-box">
+                                        ΔΙΧΩΡΑ:
+                                        <span class="ag-courses-item_date">
+                                            90€ / ΗΜΕΡΑ
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <video muted loop autoplay playsinline preload="metadata">
+                        <!-- MP4 format source -->
+                        <source src="images/videobeach.mp4" type="video/mp4">
+                        <!-- WebM format source -->
+                        <source src="images/videobeach.webm" type="video/webm">
+                        <!-- Fallback content in case the browser doesn't support the video -->
+                        Ο περιηγητής σας δεν υποστηρίζει την αναπαραγωγή αυτού του βίντεο.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section bg-white" id="section-faqs">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="font-weight-light text-primary">Συχνες Ερωτησεις</h2>
+                        <p class="color-black-opacity-5">Εδώ θα βρείτε κάποιες ερωτήσεις που ίσως έχετε για το
+                            ξενοδοχείο μας</p>
+                    </div>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row justify-content-center">
+                        <div class="tabs-container">
+                            <ul class="tabs">
+                                <li>
+                                    <a id="tab1" title="Πρόσβαση">
+                                        <span class="fas fa-bus custom-icon2"></span>
+                                        <span class="d-none d-md-inline">Πρόσβαση</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="tab2" title="Check-in">
+                                        <span class="fas fa-check custom-icon2"></span>
+                                        <span class="d-none d-md-inline">Check-in</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="tab3" title="Κράτηση">
+                                        <span class="fas fa-bed custom-icon2"></span>
+                                        <span class="d-none d-md-inline">Κράτηση</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content-wrapper">
+                                <section id="tab1-content" class="tab-content">
+                                    <h2>Πρόσβαση</h2>
+                                    <p>
+                                        Για να έρθετε στο ξενοδοχείο μας / Λεωνίδιο με υπεραστική συγκοινωνία,
+                                        μπορείτε
+                                        να
+                                        χρησιμοποιήσετε
+                                        την υπηρεσία
+                                        του ΚΤΕΛ. Το ΚΤΕΛ παρέχει συχνά δρομολόγια που εξυπηρετούν την περιοχή, και
+                                        μπορείτε να
+                                        ενημερωθείτε
+                                        για τα δρομολόγια και τις τιμές <a href="https://ktelarkadias.gr/">στην
+                                            ιστοσελίδα τους</a> ή
+                                        μέσω
+                                        τηλεφώνου.
+                                    </p>
+                                </section>
+                                <section id="tab2-content" class="tab-content">
+                                    <h2>Check-in / Check-out</h2>
+                                    <p class="centered-text">
+                                        <strong><b>Check-in:</b></strong>Ξεκινάει 15:00 το μεσημέρι.
+                                    </p>
+                                    <p class="centered-text">
+                                        <strong><b>Check-out:</b></strong> Η ώρα που πρέπει να αποχωρήσετε από το
+                                        δωμάτιό σας και να επιστρέψετε τα κλειδιά είναι στις 11:00 το
+                                        πρωί.
+                                    </p>
+                                </section>
+                                <section id="tab3-content" class="tab-content">
+                                    <h2>Κράτηση</h2>
+                                    <p>
+                                        Μπορείτε εύκολα να κάνετε κράτηση δωματίου για την επιθυμητή σας περίοδο
+                                        επικοινωνώντας μαζί μας
+                                        τηλεφωνικά <a href="#section-our-team">στα νούμερα</a> που αναφέρονται
+                                        παραπάνω.
+                                    </p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section bg-light" id="section-contact" data-aos="fade-up" data-aos-delay="100">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-7 text-center border-primary">
+                        <h2 class="font-weight-light text-primary">ΕΠΙΚΟΙΝΩΝΙΑ</h2>
+                        <p class="color-black-opacity-5">
+                            Επικοινωνήστε μαζί μας για οποιαδήποτε αίτηση ή απορία έχετε!
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5 bg-white" data-aos="fade-up" data-aos-delay="100">
+                        <form id="contact-form">
+                            <input type="hidden" name="contact_number">
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="color-black-opacity-5
+                                                pt-2" for="fname" data-aos="fade-up"
+                                        data-aos-delay="120">Ονοματεπώνυμο:</label>
+                                    <input type="text" name="user_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="color-black-opacity-5" data-aos="fade-up" data-aos-delay="140">
+                                        Ηλεκτρονική
+                                        Διεύθυνση:
+                                    </label>
+                                    <input type="email" name="user_email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <label class="color-black-opacity-5" for="message" data-aos="fade-up"
+                                        data-aos-delay="160">Μήνυμα:</label>
+                                    <textarea name="message" cols="30" rows="9" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-6 pl-5">
+                                    <div class="g-recaptcha " data-sitekey="6Ldii8IoAAAAAGxL1soM3BxuXS1RJItXnnnMlwp6">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center pt-3" data-aos="fade-up" data-aos-delay="180">
+                                    <input type="submit" value="Αποστολη
+                                                Email" class="btn btn-primary py-2
+                                                px-4
+                                                text-white" onclick="showAlert(event)">
+                                </div>
+
+                            </div>
+                        </form>
+                        <script>
+                            function showAlert(event) {
+                                event.preventDefault();
+
+                                var userName = document.getElementsByName("user_name")[0].value;
+                                var userEmail = document.getElementsByName("user_email")[0].value;
+                                var message = document.getElementsByName("message")[0].value;
+                                const form = document.querySelector('form');
+                                const grecaptchaResponse = grecaptcha.enterprise.getResponse();
+
+                                if (userName === "" && userEmail === "" && message === "") {
+                                    return;
+                                }
+
+                                var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                                if (userName === "" || userEmail === "" || message === "") {
+                                    Swal.fire({
+                                        title: "Σφάλμα!",
+                                        text: "Παρακαλούμε συμπληρώστε όλα τα πεδία.",
+                                        icon: "error",
+                                        confirmButtonColor: "#f16821",
+                                        confirmButtonText: "ΟΚ",
+                                    });
+                                } else if (!emailRegex.test(userEmail)) {
+                                    Swal.fire({
+                                        title: "Σφάλμα!",
+                                        text: "Παρακαλούμε εισάγετε μια έγκυρη διεύθυνση email.",
+                                        icon: "error",
+                                        confirmButtonColor: "#f16821",
+                                        confirmButtonText: "ΟΚ",
+                                    });
+                                } else {
+                                    // Verify reCAPTCHA
+                                    if (!grecaptchaResponse.length > 0) {
+                                        Swal.fire({
+                                            title: "Σφάλμα!",
+                                            text: "Παρακαλούμε επιβεβαιώστε ότι δεν είστε ρομπότ.",
+                                            icon: "error",
+                                            confirmButtonColor: "#f16821",
+                                            confirmButtonText: "ΟΚ",
+                                        });
+                                    } else {
+                                        Swal.fire({
+                                            title: "Επιβεβαίωση",
+                                            text: "Θέλετε να στείλετε το email;",
+                                            icon: "question",
+                                            showCancelButton: true,
+                                            confirmButtonColor: "#3085d6",
+                                            cancelButtonColor: "#d33",
+                                            confirmButtonText: "Ναι",
+                                            cancelButtonText: "Όχι",
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                submitForm();
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+
+                            function submitForm() {
+                                var contactForm = document.getElementById('contact-form');
+                                contactForm.contact_number.value = Math.random() * 100000 | 0;
+                                emailjs.sendForm('contact_service', 'contact_form', contactForm)
+                                    .then(function () {
+                                        Swal.fire({
+                                            title: "Επιτυχία!",
+                                            text: "Το email στάλθηκε με επιτυχία!",
+                                            icon: "success",
+                                            confirmButtonColor: "#f16821",
+                                            confirmButtonText: "ΟΚ",
+                                        });
+                                    }, function (error) {
+                                        console.log('FAILED...', error);
+                                    });
+                            }
+                            document.addEventListener("keydown", function (event) {
+                                if (event.key === "Enter") {
+                                    showAlert(event);
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-4 mb-3 bg-white">
+                            <p class="mb-0 font-weight-bold">Ταχυδρομικός Κώδικας</p>
+                            <p class="mb-4">
+                                <a "
+                                    href="
+                                    https://www.google.com/maps/place/Sirines+Apartments/@37.1489821,22.8930506,17z/data=!3m1!4b1!4m6!3m5!1s0x149fcec54d00ea57:0x32d8a02ba2190210!8m2!3d37.1489821!4d22.8930506!16s%2Fg%2F11fxvcjl46?hl=el&entry=ttu">
+                                    Λεωνίδιο
+                                    223 00
+                                </a>
+                            </p>
+                            <p class="mb-0 font-weight-bold">Τηλέφωνα Επικοινωνίας</p>
+                            <p class="mb-4">
+                                <a href="#section-our-team">
+                                    6944422678
+                                    <d class="" style=" color: black;"> |</d>
+                                    6936162428
+                                </a>
+                            </p>
+                            <p class="mb-0 font-weight-bold">Διεύθυνση Email</p>
+                            <p class="mb-0">
+                                <a href="#section-our-team">
+                                    gtsouka@yahoo.com
+                                    <d class="" style=" color: black;"> |</d>
+                                    altsouka@yahoo.com
+                                </a>
+                            </p>
+                        </div>
+                        <div class="p-4 mb-3 bg-white" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="h5 text-black mb-3">
+                                Περισσότερες πληροφορίες
+                            </h3>
+                            <p>
+                                Ενημερωθείτε με τις πιο καίριες και συχνές ερωτήσεις που μπορεί να σας απασχολούν στην
+                                σελίδα "Συχνές Ερωτήσεις".
+                            </p>
+                            <p>
+                                <a href="#section-faqs" class="btn btn-primary px-4 py-2
+                                            text-white">ΠΑΤΩΝΤΑΣ ΕΔΩ</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <footer class="site-footer" data-aos="fade-up" data-aos-delay="100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <h2 class="footer-heading mb-4">Περισσότερα για εμάς</h2>
+                                <ul class="list-unstyled">
+                                    <p>Τοποθεσία Διαμερισμάτων:
+                                        <br>
+                                        <i>
+                                            Λεωνίδιο, Νομός Αρκαδίας, Πελοπόννησος,
+                                            <br> TK: 223 00
+                                            </d>
+                                        </i>
+                                    </p>
+                                    <p>Τηλέφωνα Επικοινωνίας:
+                                        <br>
+                                        <i>
+                                            6944422678
+                                            <d class="" style="color: #fff;">|</d>
+                                            6936162428
+                                        </i>
+                                    </p>
+                                    <p class="footer-heading"></p>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h2 class="footer-heading mb-4">Χρήσιμοι σύνδεσμοι</h2>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#section-about">Ποιοι είμαστε</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-services">Παροχές</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-faqs">Συχνές ερωτήσεις</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-contact">Επικοινωνία</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h2 class="footer-heading mb-4">Ακολουθήστε μας</h2>
+                                <button class="buttonend">
+                                    <span class="buttonend-text">
+                                        <i class="fa-solid fa-share-nodes" style="padding-left:12px;"></i>
+                                        <span class="pr-2"
+                                            style="font-size: 15px; justify-content: center; padding-right: 15px;">
+                                            Social Media
+                                        </span>
+                                    </span>
+                                    <span class="buttonend-links">
+                                        <a href="#">
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/sirines_apartments/">
+                                            <i class="icon-instagram"></i>
+                                        </a>
+                                    </span>
+                                </button>
+                                <a href="index.html">
+                                    <div class="logo-container pb-5 ml-4">
+                                        <img src="images/logo.png" alt="logo" class="logo-image2"
+                                            style="width:100%; height: auto; transition: transform 0.3s ease-in-out; padding-right: 100px;"
+                                            onmouseover="this.style.transform='scale(1.2)'"
+                                            onmouseout="this.style.transform='scale(1)'">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  text-center p-0" style="justify-content: center;">
+                    <p style="color: #e5e5e5; font-size: 1.5vh;">
+                        Επιμελητήριο Αρκαδίας,
+                        Αρ.Μητρώου
+                        12852. Αρ. ΓΕΜΗ
+                        28994914000
+                    </p>
+                </div>
+                <div class="row mt-5 text-center">
+                    <div class="col-md-12">
+                        <div class="border-top pt-5">
+                            <p>
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                All rights reserved | This template is made with
+                                <i class="icon-heart" aria-hidden="true"></i> by
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                |
+                                <a href="https://www.flaticon.com/free-icons/fashion" title="fashion icons">
+                                    Fashion
+                                    icons
+                                    created by
+                                    Freepik -
+                                    Flaticon
+                                </a>
+                            </p>
+                            <p>
+                                Δημιουργοί : Πόρος Ι. Κωνσταντίνος , Δαμίγος Πέτρος
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- </div> -->
+        <script src="js/jquery-3.3.1.min.js "></script>
+        <script src="js/jquery-migrate-3.0.1.min.js "></script>
+        <script src="js/jquery-ui.js "></script>
+        <script src="js/jquery.easing.1.3.js "></script>
+        <script src="js/popper.min.js "></script>
+        <script src="js/bootstrap.min.js "></script>
+        <script src="js/owl.carousel.min.js "></script>
+        <script src="js/jquery.stellar.min.js "></script>
+        <script src="js/jquery.countdown.min.js "></script>
+        <script src="js/jquery.magnific-popup.min.js "></script>
+        <script src="js/bootstrap-datepicker.min.js "></script>
+        <script src="js/aos.js "></script>
+        <script src="js/main.js "></script>
+        <script src="js/modal.js"></script>
+        <script src="js/faqs.js"></script>
+    </body>
+
+</html>

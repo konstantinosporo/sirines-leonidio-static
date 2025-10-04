@@ -1,0 +1,100 @@
+.social a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.me {
+  width: 400px;
+  margin: 90px auto;
+}
+
+.me p,
+.me h1 {
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.me p {
+  font-weight: 200;
+}
+
+.me span {
+  font-weight: bold;
+}
+
+.social {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 9999999;
+}
+
+.social ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+  z-index: 9999999;
+}
+
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 280px;
+  text-align: right;
+  padding: 5px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+  z-index: 9999999;
+}
+
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(0, 0, 0, 0.03);
+  z-index: 9999999;
+}
+
+.social ul li:hover a {
+  color: #000;
+}
+
+.social ul li:hover i {
+  color: #E1306C;
+  background: rgba(0, 0, 0, 0.1);
+  transform: rotate(360deg);
+  transition: all 1s;
+  z-index: 9999999;
+
+}
+
+.social ul li:hover #google {
+  color: #4285F4;
+  background: rgba(0, 0, 0, 0.1);
+  transform: rotate(360deg);
+  transition: all 1s;
+  z-index: 9999999;
+}
+
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  transform: rotate(0deg);
+  z-index: 9999999;
+}
+
+
+@media only screen and (max-width:450px) {
+  .social {
+
+    top: 60px;
+    left: 10px;
+
+  }
+
+}

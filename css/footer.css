@@ -1,0 +1,93 @@
+@media only screen and (max-width: 450px) {
+    .logo-image2 {
+        padding-left: 50px;
+    }
+}
+
+.buttonend {
+    position: relative;
+    overflow: hidden;
+    width: 140px;
+    height: 43px;
+    border: 0;
+    color: #f7f7f7;
+    background: #f16821;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttonend i {
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.buttonend-text,
+.buttonend-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+
+}
+
+.buttonend-text {
+    gap: 10px;
+    justify-content: center;
+    color: inherit;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.buttonend-links {
+    opacity: 0;
+    justify-content: space-between;
+    padding: 0 28px;
+    transition: 0.2s;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.buttonend-links a {
+    translate: 0 50px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-links a:nth-child(1) {
+    transition-delay: 0.05s;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-links a:nth-child(2) {
+    transition-delay: 0.1s;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-links a:nth-child(3) {
+    transition-delay: 0.15s;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-text {
+    translate: 0 -100%;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-links {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.buttonend:hover .buttonend-links a {
+    translate: 0;
+    overflow: hidden;
+}
