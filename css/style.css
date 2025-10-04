@@ -7,6 +7,7 @@ body {
     color: #4d4d4d;
     font-weight: 300;
     font-size: 1rem;
+    overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -114,13 +115,14 @@ h5,
 /* Media query for small screens (adjust the screen width as needed) */
 @media (max-width: 768px) {
     .social-wrapper {
-        top: 12px; /* Move to the top right on small screens */
+        top: 12px;
+        /* Move to the top right on small screens */
         left: auto;
         right: 60px;
         bottom: auto;
         z-index: 99999;
     }
-    
+
 }
 
 
@@ -523,6 +525,7 @@ h5,
         top: 3.5%;
         right: 6%;
     }
+
     .site-navbar {
         height: 60px;
     }
@@ -534,6 +537,7 @@ h5,
         top: 3.5%;
         right: 6%;
     }
+
     .site-menu-toggle {
         position: fixed;
         top: 1.9%;

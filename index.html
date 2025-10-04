@@ -45,20 +45,6 @@
                 emailjs.init('A-P9Unha_3XAbbTGj');
             })();
         </script>
-        <script type="text/javascript">
-            window.onload = function () {
-                document.getElementById('contact-form').addEventListener('submit', function (event) {
-                    event.preventDefault();
-                    this.contact_number.value = Math.random() * 100000 | 0;
-                    emailjs.sendForm('contact_service', 'contact_form', this)
-                        .then(function () {
-                            console.log('SUCCESS!');
-                        }, function (error) {
-                            console.log('FAILED...', error);
-                        });
-                });
-            }
-        </script>
         <link rel="icon" type="image/png" href="images/favicon.webp">
     </head>
 
@@ -991,7 +977,7 @@
                             <div class="row form-group">
                                 <div class="col-md-6 text-center pt-3" data-aos="fade-up" data-aos-delay="180">
                                     <button type="submit" class="btn btn-primary py-2 px-4 text-white">
-                                        Αποστολή Email
+                                        Αποστολη Email
                                     </button>
                                 </div>
                             </div>
@@ -1001,92 +987,76 @@
                             async function showAlert(event) {
                                 event.preventDefault();
 
-                                const userName = document.getElementsByName("user_name")[0].value.trim();
-                                const userEmail = document.getElementsByName("user_email")[0].value.trim();
-                                const message = document.getElementsByName("message")[0].value.trim();
-
-                                // Basic field validation
+                                const form = document.getElementById('contact-form');
+                                const userName = form.user_name.value.trim();
+                                const userEmail = form.user_email.value.trim();
+                                const message = form.message.value.trim();
                                 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+                                // Basic validation
                                 if (!userName || !userEmail || !message) {
-                                    Swal.fire({
+                                    return Swal.fire({
                                         title: "Σφάλμα!",
                                         text: "Παρακαλούμε συμπληρώστε όλα τα πεδία.",
                                         icon: "error",
                                         confirmButtonColor: "#f16821",
                                         confirmButtonText: "ΟΚ",
                                     });
-                                    return;
                                 }
 
                                 if (!emailRegex.test(userEmail)) {
-                                    Swal.fire({
+                                    return Swal.fire({
                                         title: "Σφάλμα!",
                                         text: "Παρακαλούμε εισάγετε μια έγκυρη διεύθυνση email.",
                                         icon: "error",
                                         confirmButtonColor: "#f16821",
                                         confirmButtonText: "ΟΚ",
                                     });
-                                    return;
                                 }
 
-                                // ✅ Run reCAPTCHA Enterprise v3
-                                grecaptcha.enterprise.ready(async () => {
-                                    try {
-                                        const token = await grecaptcha.enterprise.execute(
-                                            '6Ld8Jd4rAAAAAJ-gVaM_-Hy5wwlYG6jUdB_SjgGw',
-                                            { action: 'send_email' }
-                                        );
+                                // Step 1: Get reCAPTCHA token
+                                const token = await grecaptcha.enterprise.execute(
+                                    '6Ld8Jd4rAAAAAJ-gVaM_-Hy5wwlYG6jUdB_SjgGw',
+                                    { action: 'send_email' }
+                                );
 
-                                        if (!token) {
-                                            Swal.fire({
-                                                title: "Σφάλμα!",
-                                                text: "Η επαλήθευση reCAPTCHA απέτυχε. Προσπαθήστε ξανά.",
-                                                icon: "error",
-                                                confirmButtonColor: "#f16821",
-                                                confirmButtonText: "ΟΚ",
-                                            });
-                                            return;
-                                        }
+                                if (!token) {
+                                    return Swal.fire({
+                                        title: "Σφάλμα!",
+                                        text: "Η επαλήθευση reCAPTCHA απέτυχε. Προσπαθήστε ξανά.",
+                                        icon: "error",
+                                        confirmButtonColor: "#f16821",
+                                        confirmButtonText: "ΟΚ",
+                                    });
+                                }
 
-                                        // Ask for confirmation before sending email
-                                        Swal.fire({
-                                            title: "Επιβεβαίωση",
-                                            text: "Θέλετε να στείλετε το email;",
-                                            icon: "question",
-                                            showCancelButton: true,
-                                            confirmButtonColor: "#3085d6",
-                                            cancelButtonColor: "#d33",
-                                            confirmButtonText: "Ναι",
-                                            cancelButtonText: "Όχι",
-                                        }).then(async (result) => {
-                                            if (result.isConfirmed) {
-                                                await submitForm(token);
-                                            }
-                                        });
-                                    } catch (err) {
-                                        console.error('reCAPTCHA error:', err);
-                                        Swal.fire({
-                                            title: "Σφάλμα!",
-                                            text: "Πρόβλημα με την υπηρεσία επαλήθευσης. Προσπαθήστε ξανά.",
-                                            icon: "error",
-                                            confirmButtonColor: "#f16821",
-                                            confirmButtonText: "ΟΚ",
-                                        });
-                                    }
+                                // Step 2: Ask for user confirmation AFTER validation & reCAPTCHA
+                                const result = await Swal.fire({
+                                    title: "Επιβεβαίωση",
+                                    text: "Θέλετε να στείλετε το email;",
+                                    icon: "question",
+                                    showCancelButton: true,
+                                    confirmButtonColor: "#3085d6",
+                                    cancelButtonColor: "#d33",
+                                    confirmButtonText: "Ναι",
+                                    cancelButtonText: "Όχι",
                                 });
+
+                                if (!result.isConfirmed) {
+                                    return; // user canceled — stop here
+                                }
+
+                                // Step 3: Proceed with sending email
+                                await submitForm(token);
                             }
 
                             async function submitForm(token) {
                                 const contactForm = document.getElementById('contact-form');
                                 contactForm.contact_number.value = Math.random() * 100000 | 0;
 
-                                // Optionally include token in form for backend validation
-                                const tokenInput = document.createElement('input');
-                                tokenInput.type = 'hidden';
-                                tokenInput.name = 'g-recaptcha-response';
-                                tokenInput.value = token;
-                                contactForm.appendChild(tokenInput);
+                                // Optional: include token in form for backend validation
+                                const tokenInput = document.getElementById('g-recaptcha-response');
+                                if (tokenInput) tokenInput.value = token;
 
                                 try {
                                     await emailjs.sendForm('contact_service', 'contact_form', contactForm);
@@ -1109,11 +1079,12 @@
                                 }
                             }
 
-                            // Bind both button and Enter key
+                            // Enable Enter key for submission
                             document.addEventListener("keydown", (event) => {
                                 if (event.key === "Enter") showAlert(event);
                             });
                         </script>
+
                     </div>
                     <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
                         <div class="p-4 mb-3 bg-white">
